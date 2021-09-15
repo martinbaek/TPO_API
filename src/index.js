@@ -5,12 +5,13 @@ import reportWebVitals from './reportWebVitals';
 import PaginaInicial from './PaginaInicial';
 import LogInPage from './LogInPage';
 import SignInPage from './SignInPage';
+import LoggedPage from './LoggedPage';
 
 
 ReactDOM.render(
 
   <React.StrictMode>
-    <SignInPage/>
+    <PaginaInicial/>
   </React.StrictMode>,
   document.getElementById('root')
 );

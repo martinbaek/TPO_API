@@ -8,6 +8,7 @@ function LogInPage() {
 
       <DrawerLogIn/>
       <LogIn/>
+      <h4>Me olvide la contraseña</h4>
       <h4>Si usted no está registrado toque el boton de SIGN IN arriba a la derecha.</h4>
     </div>
   );

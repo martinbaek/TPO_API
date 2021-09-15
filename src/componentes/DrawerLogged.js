@@ -20,7 +20,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import Button from '@material-ui/core/Button';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import InfoIcon from '@material-ui/icons/Info';
-
+import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 const drawerWidth =  450;
 
@@ -125,9 +126,9 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Sign In
+            Nombre empresa
           </Typography>
-          <Button color="inherit" className={classes.title}>Log In</Button>
+          <Button color="inherit" className={classes.title}>Log Out</Button>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -150,6 +151,19 @@ export default function MiniDrawer() {
         </div>
         <Divider />
         <List>
+          <ListItem button>
+              <ListItemIcon>
+                <PeopleAltIcon />
+              </ListItemIcon>
+              <ListItemText primary='Paciente/s' />
+          </ListItem>
+          <ListItem button>
+              <ListItemIcon>
+                <PersonAddIcon />
+              </ListItemIcon>
+              <ListItemText primary='Agregar Paciente' />
+          </ListItem>
+        <Divider />
             <ListItem button>
               <ListItemIcon>
                 <CalendarTodayIcon />
@@ -172,7 +186,6 @@ export default function MiniDrawer() {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Typography paragraph>
-            
         </Typography>
       </main>
     </div>
