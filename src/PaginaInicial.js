@@ -11,7 +11,7 @@ function PaginaInicial() {
       <img src="img/Chicosjuntos.jpg" width= "500" height="341"/>
       <h4>
         Bienvenidos
-        La pagina se usa de la siguiente manera hola
+        La pagina se usa de la siguiente manera
       </h4>
     </div>
   );
