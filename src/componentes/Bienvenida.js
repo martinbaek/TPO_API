@@ -1,5 +1,5 @@
 import React from "react";
-import mifoto from "../img/martin.jpg";
+
 
 function Bienvenida(props)
 {

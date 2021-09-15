@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import paginaInicial from './paginaInicial';
+import PaginaInicial from './PaginaInicial';
 import LogInPage from './LogInPage';
+import SignInPage from './SignInPage';
+
 
 ReactDOM.render(
 
   <React.StrictMode>
-    <LogInPage/>
+    <SignInPage/>
   </React.StrictMode>,
   document.getElementById('root')
 );
