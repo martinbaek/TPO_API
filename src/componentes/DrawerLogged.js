@@ -157,12 +157,6 @@ export default function MiniDrawer() {
               </ListItemIcon>
               <ListItemText primary='Paciente/s' />
           </ListItem>
-          <ListItem button>
-              <ListItemIcon>
-                <PersonAddIcon />
-              </ListItemIcon>
-              <ListItemText primary='Agregar Paciente' />
-          </ListItem>
         <Divider />
             <ListItem button>
               <ListItemIcon>
