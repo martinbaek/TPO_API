@@ -8,7 +8,7 @@ function PaginaInicial() {
     <div className="App">
 
       <Drawer/>
-      <img src="img/Chicosjuntos.jpg" width= "500" height="341"/>
+      <img src={Chicosjuntos} alt="juguemos" width="500" height="341"></img>
       <h4>
         Bienvenidos
         La pagina se usa de la siguiente manera
