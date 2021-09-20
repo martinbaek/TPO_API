@@ -15,7 +15,7 @@ import CalendarioPage from './CalendarioPage';
 ReactDOM.render(
 
   <React.StrictMode>
-    <CalendarioPage/>
+    <PaginaInicial/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -8,11 +8,28 @@ function PaginaInicial() {
     <div className="App">
 
       <Drawer/>
-      <img src={Chicosjuntos} alt="juguemos" width="500" height="341"></img>
       <h4>
-        Bienvenidos
-        La pagina se usa de la siguiente manera
+        NOMBRE!!! - Lideres en Medicina Pedíatrica.
       </h4>
+      <img src={Chicosjuntos} alt="juguemos" width="300" height="201"></img>
+      <h4>
+        Asumimos el compromiso de brindar el servicio más completo para sus niños, 
+        acompañado de información útil y un sólido respaldo tecnológico.
+      </h4>
+      <h4>
+        Desde nuestro portal podrán visualizar los turnos pendientes de cada hijo, 
+        y también realizar los nuevos. 
+      </h4> 
+      <h4>
+        Además, podrán cargar los estudios médicos para poder 
+        llevar un control ordenado de cada uno de ellos. 
+      </h4>  
+      <h4>
+        Le brindaremos toda la información 
+        necesaria actualizada, y estamos a su disposición ante cualquier inconveniente.
+
+      </h4>
+      
     </div>
   );
 }
