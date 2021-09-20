@@ -8,13 +8,15 @@ import SignInPage from './SignInPage';
 import LoggedPage from './LoggedPage';
 import PacientePage from './PacientePage';
 import PacienteProfile from './PacienteProfile';
-import { createBrowserHistory } from 'history';
-import ReactGA from 'react-ga';
+//import { createBrowserHistory } from 'history';
+//import ReactGA from 'react-ga';
 import CalendarioPage from './CalendarioPage';
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+//import { Router, Route, Switch, Redirect } from "react-router-dom";
 
-var hist = createBrowserHistory();
+
+//var hist = createBrowserHistory();
 ReactDOM.render(
+  /*
   <Router history={hist}>
     <Switch>
       <Route path="/LogInPage" component={LogInPage}/>
@@ -27,5 +29,9 @@ ReactDOM.render(
       <Route path="/PaginaInicial" component={PaginaInicial}/>
     </Switch>
   </Router>,
+  */
+  <React.StrictMode>
+  <PaginaInicial/>
+</React.StrictMode>,
   document.getElementById('root')
 );
