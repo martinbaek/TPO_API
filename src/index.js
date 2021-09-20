@@ -1,26 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
+import ReportWebVitals from './ReportWebVitals';
 import PaginaInicial from './PaginaInicial';
 import LogInPage from './LogInPage';
 import SignInPage from './SignInPage';
 import LoggedPage from './LoggedPage';
 import PacientePage from './PacientePage';
 import PacienteProfile from './PacienteProfile';
-
+//import { createBrowserHistory } from 'history';
+//import ReactGA from 'react-ga';
 import CalendarioPage from './CalendarioPage';
-
-
+//import { Router, Route, Switch, Redirect } from "react-router-dom";
+//var hist = createBrowserHistory();
 ReactDOM.render(
-
-  <React.StrictMode>
-    <PaginaInicial/>
-  </React.StrictMode>,
-  document.getElementById('root')
+/*
+<Router history={hist}>
+<Switch>
+<Route path="/LogInPage" component={LogInPage}/>
+<Route path="/LoggedPage" component={LoggedPage}/>
+<Route path="/CalendarioPage" component={CalendarioPage}/>
+<Route path="/ReportWebVitals" component={ReportWebVitals}/>
+<Route path="/SignInPage" component={SignInPage}/>
+<Route path="/PacientePage" component={PacientePage}/>
+<Route path="/PacienteProfile" component={PacienteProfile}/>
+<Route path="/PaginaInicial" component={PaginaInicial}/>
+</Switch>
+</Router>,
+*/
+<React.StrictMode>
+<PaginaInicial/>
+</React.StrictMode>,
+document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
