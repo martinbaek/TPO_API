@@ -12,24 +12,26 @@ import PacienteProfile from './PacienteProfile';
 //import ReactGA from 'react-ga';
 import CalendarioPage from './CalendarioPage';
 //import { Router, Route, Switch, Redirect } from "react-router-dom";
+
+
 //var hist = createBrowserHistory();
 ReactDOM.render(
-/*
-<Router history={hist}>
-<Switch>
-<Route path="/LogInPage" component={LogInPage}/>
-<Route path="/LoggedPage" component={LoggedPage}/>
-<Route path="/CalendarioPage" component={CalendarioPage}/>
-<Route path="/ReportWebVitals" component={ReportWebVitals}/>
-<Route path="/SignInPage" component={SignInPage}/>
-<Route path="/PacientePage" component={PacientePage}/>
-<Route path="/PacienteProfile" component={PacienteProfile}/>
-<Route path="/PaginaInicial" component={PaginaInicial}/>
-</Switch>
-</Router>,
-*/
-<React.StrictMode>
-<PaginaInicial/>
+  /*
+  <Router history={hist}>
+    <Switch>
+      <Route path="/LogInPage" component={LogInPage}/>
+      <Route path="/LoggedPage" component={LoggedPage}/>
+      <Route path="/CalendarioPage" component={CalendarioPage}/>
+      <Route path="/ReportWebVitals" component={ReportWebVitals}/>
+      <Route path="/SignInPage" component={SignInPage}/>
+      <Route path="/PacientePage" component={PacientePage}/>
+      <Route path="/PacienteProfile" component={PacienteProfile}/>
+      <Route path="/PaginaInicial" component={PaginaInicial}/>
+    </Switch>
+  </Router>,
+  */
+  <React.StrictMode>
+  <PaginaInicial/>
 </React.StrictMode>,
-document.getElementById('root')
+  document.getElementById('root')
 );
