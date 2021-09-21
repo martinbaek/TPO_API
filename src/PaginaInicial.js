@@ -2,6 +2,7 @@ import './App.css';
 import Bienvenida from './componentes/Bienvenida';
 import Drawer from './componentes/Drawer';
 import Chicosjuntos from "./img/Chicosjuntos.jpg";
+import prueba from "./img/prueba.png"
 
 function PaginaInicial() {
   return (
@@ -28,8 +29,11 @@ function PaginaInicial() {
         Le brindaremos toda la información 
         necesaria actualizada, y estamos a su disposición ante cualquier inconveniente.
 
+      </h4>   
+      <h4>
+      <img src={prueba} alt="juguemos" width="800" height="201"></img>
       </h4>
-      
+
     </div>
   );
 }

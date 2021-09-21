@@ -7,6 +7,8 @@ import LogInPage from './LogInPage';
 import SignInPage from './SignInPage';
 import LoggedPage from './LoggedPage';
 import PacientePage from './PacientePage';
+import Percentiles from './Percentiles';
+import ControlesMedicos from "./ControlesMedicos";
 import PacienteProfile from './PacienteProfile';
 //import { createBrowserHistory } from 'history';
 //import ReactGA from 'react-ga';
@@ -31,7 +33,7 @@ ReactDOM.render(
   </Router>,
   */
   <React.StrictMode>
-  <PaginaInicial/>
+  <ControlesMedicos/>
 </React.StrictMode>,
   document.getElementById('root')
 );
