@@ -33,7 +33,7 @@ ReactDOM.render(
   </Router>,
   */
   <React.StrictMode>
-    <ControlesMedicos/>
+   <PaginaInicial/>
   </React.StrictMode>,
   document.getElementById('root')
 );
