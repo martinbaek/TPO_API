@@ -77,7 +77,6 @@ function ControlesMedicos() {
         Durante el examen se podrían identificar varias enfermedades de la piel, marcas de nacimiento o sarpullidos.
         </h4>
       </p>
-
       <p>
         • Corazón y pulmones:
         <img src={corazon} align="left" width="200" height="101"></img>
