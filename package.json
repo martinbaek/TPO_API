@@ -46,7 +46,6 @@
   },
   "description": "Trabajo Práctico de aplicaciones interactivas",
   "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/martinbaek/TPO_API.git"
