@@ -30,7 +30,7 @@ ReactDOM.render(
       <Route path="/SignInPage" component={SignInPage}/>
       <Route path="/PacientePage" component={PacientePage}/>
       <Route path="/PacienteProfile" component={PacienteProfile}/>
-      <Route path="/PaginaInicial" component={PaginaInicial}/>
+      <Route path="/" component={PaginaInicial}/>
     </Switch>
   </Router>,
   /*
