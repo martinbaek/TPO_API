@@ -20,6 +20,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import Button from '@material-ui/core/Button';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import InfoIcon from '@material-ui/icons/Info';
+import {Link} from "react-router-dom";
 
 
 const drawerWidth =  450;

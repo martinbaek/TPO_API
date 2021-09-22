@@ -10,30 +10,33 @@ import PacientePage from './PacientePage';
 import Percentiles from './Percentiles';
 import ControlesMedicos from "./ControlesMedicos";
 import PacienteProfile from './PacienteProfile';
-//import { createBrowserHistory } from 'history';
+import { createBrowserHistory } from 'history';
 //import ReactGA from 'react-ga';
 import CalendarioPage from './CalendarioPage';
-//import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { Router, Route, Switch, Redirect } from "react-router-dom";
 
 
-//var hist = createBrowserHistory();
+var hist = createBrowserHistory();
 ReactDOM.render(
-  /*
+  
   <Router history={hist}>
     <Switch>
       <Route path="/LogInPage" component={LogInPage}/>
+      <Route path="/Percentiles" component={LogInPage}/>
+      <Route path="/ControlesMedicos" component={ControlesMedicos}/>
       <Route path="/LoggedPage" component={LoggedPage}/>
       <Route path="/CalendarioPage" component={CalendarioPage}/>
       <Route path="/ReportWebVitals" component={ReportWebVitals}/>
       <Route path="/SignInPage" component={SignInPage}/>
       <Route path="/PacientePage" component={PacientePage}/>
       <Route path="/PacienteProfile" component={PacienteProfile}/>
-      <Route path="/PaginaInicial" component={PaginaInicial}/>
+      <Route path="/" component={PaginaInicial}/>
     </Switch>
   </Router>,
-  */
+  /*
   <React.StrictMode>
   <PaginaInicial/>
   </React.StrictMode>,
+  */
   document.getElementById('root')
 );

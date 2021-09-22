@@ -20,7 +20,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import Button from '@material-ui/core/Button';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import InfoIcon from '@material-ui/icons/Info';
-
+import {Link} from "react-router-dom";
+import LinkButton from'./LinkButton';
 
 const drawerWidth =  450;
 
@@ -127,8 +128,12 @@ export default function MiniDrawer() {
           <Typography variant="h6" noWrap>
             Nombre empresa
           </Typography>
+          <Link to ="/LogInPage" className={classes.title}>
           <Button color="inherit" className={classes.title}>Login</Button>
+          </Link>
+          <Link to ="/SignInPage" >
           <Button color="inherit" >Sign In</Button>
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -151,23 +156,30 @@ export default function MiniDrawer() {
         </div>
         <Divider />
         <List>
+           <Link to ="/CalendarioPage" >
             <ListItem button>
               <ListItemIcon>
                 <CalendarTodayIcon />
               </ListItemIcon>
               <ListItemText primary='Calendario de vacunación' />
             </ListItem>
+          </Link>
+          <Link to ="/ControlesMedicos" >
             <ListItem button>
               <ListItemIcon>
                 <InfoIcon />
               </ListItemIcon>
               <ListItemText primary='Información sobre controles médicos' />
               </ListItem>
+          </Link>
+          <Link to ="/Percentiles" >
             <ListItem button>
             <ListItemIcon>
               <InfoIcon />
             </ListItemIcon>
-            <ListItemText primary='Percentiles y parámetros generales de control' />            </ListItem>
+            <ListItemText primary='Percentiles y parámetros generales de control' />            
+            </ListItem>
+          </Link>
         </List>
       </Drawer>
       <main className={classes.content}>
