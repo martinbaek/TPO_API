@@ -14,6 +14,7 @@ import { createBrowserHistory } from 'history';
 //import ReactGA from 'react-ga';
 import CalendarioPage from './CalendarioPage';
 import { Router, Route, Switch, Redirect } from "react-router-dom";
+import OlvidoContrasenaPage from './OlvidoContrasenaPage';
 
 
 var hist = createBrowserHistory();
@@ -31,7 +32,9 @@ ReactDOM.render(
       <Route path="/SignInPage" component={SignInPage}/>
       <Route path="/PacientePage" component={PacientePage}/>
       <Route path="/PacienteProfile" component={PacienteProfile}/>
+      <Route path="/OlvidoContrasenaPage" component={OlvidoContrasenaPage}/>
       <Route path="/" component={PaginaInicial}/>
+
     </Switch>
   </Router>,
   /*

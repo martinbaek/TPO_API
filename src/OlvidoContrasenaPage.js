@@ -3,22 +3,18 @@ import DrawerLogIn from './componentes/DrawerLogIn';
 import LogIn from './componentes/LogIn';
 import {Link} from "react-router-dom";
 import Button from '@material-ui/core/Button';
+import OlvidoMail from './componentes/OlvidoMail';
 
-function LogInPage() {
+function OlvidoContrasenaPage() {
   return (
     <div className="App">
       <DrawerLogIn/>
-      <h1>LOG IN</h1>
-      <LogIn/>
-      <Link to="/LoggedPage">
-      <Button color='secondary' >Log In</Button>
-      </Link>
-      <Link to="/OlvidoContrasenaPage">
-      <h4>Me olvide la contraseña</h4>
-      </Link>
+      <h1>Olvido de contraseña</h1>
+      <OlvidoMail/>
+      <Button color='secondary' >Enviar mail</Button>
       <h4>Si usted no está registrado toque <Link to ="/SignInPage" >aqui</Link></h4>
     </div>
   );
 }
 
-export default LogInPage;
+export default OlvidoContrasenaPage;
