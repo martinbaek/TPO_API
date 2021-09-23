@@ -1,8 +1,9 @@
 import './App.css';
-import DrawerSignIn from './componentes/DrawerSignIn';
+import DrawerLogIn from './componentes/DrawerLogIn';
 import SignIn from './componentes/SignIn';
 import Button from '@material-ui/core/Button';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -18,9 +19,9 @@ function SignInPage() {
   return (
     <div className="App">
 
-      <DrawerSignIn/>
+      <DrawerLogIn/>
       <SignIn/>
-      <h4>Si usted está registrado toque el boton de LOG IN arriba a la derecha.</h4>
+      <h4>Si usted está registrado toque <Link to ="/LogInPage" >aqui</Link></h4>
       <h4>Si usted no conoce su código postal busquelo
            <a href="https://www.correoargentino.com.ar/formularios/cpa" target="_blank"> aqui</a>
       </h4>

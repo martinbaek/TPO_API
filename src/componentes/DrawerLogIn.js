@@ -125,10 +125,9 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Log In
-          </Typography>
-          <Button color="inherit" className={classes.title}>Sign In</Button>
+          <Link to ="/" >
+          <Button color="inherit" >Nombre empresa</Button>
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -151,23 +150,30 @@ export default function MiniDrawer() {
         </div>
         <Divider />
         <List>
+        <Link to ="/CalendarioPage" >
             <ListItem button>
               <ListItemIcon>
                 <CalendarTodayIcon />
               </ListItemIcon>
               <ListItemText primary='Calendario de vacunación' />
             </ListItem>
+          </Link>
+          <Link to ="/ControlesMedicos" >
             <ListItem button>
               <ListItemIcon>
                 <InfoIcon />
               </ListItemIcon>
               <ListItemText primary='Información sobre controles médicos' />
               </ListItem>
+          </Link>
+          <Link to ="/Percentiles" >
             <ListItem button>
             <ListItemIcon>
               <InfoIcon />
             </ListItemIcon>
-            <ListItemText primary='Percentiles y parámetros generales de control' />            </ListItem>
+            <ListItemText primary='Percentiles y parámetros generales de control' />            
+            </ListItem>
+          </Link>
         </List>
       </Drawer>
       <main className={classes.content}>

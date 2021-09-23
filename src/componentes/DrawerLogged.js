@@ -22,6 +22,7 @@ import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import InfoIcon from '@material-ui/icons/Info';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import {Link} from "react-router-dom";
 
 const drawerWidth =  450;
 
@@ -125,10 +126,12 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Nombre empresa
-          </Typography>
-          <Button color="inherit" className={classes.title}>Log Out</Button>
+          <Link to ="/" >
+          <Button color="inherit" >Nombre empresa</Button>
+          </Link>
+          <Link to ="/" className={classes.title}>
+          <Button color="inherit" className={classes.title}>LogOut</Button>
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -151,30 +154,39 @@ export default function MiniDrawer() {
         </div>
         <Divider />
         <List>
-          <ListItem button>
+        <Link to ="/PacientePage" >
+            <ListItem button>
               <ListItemIcon>
-                <PeopleAltIcon />
+                <CalendarTodayIcon />
               </ListItemIcon>
               <ListItemText primary='Paciente/s' />
-          </ListItem>
+            </ListItem>
+          </Link>
         <Divider />
+        <Link to ="/CalendarioPage" >
             <ListItem button>
               <ListItemIcon>
                 <CalendarTodayIcon />
               </ListItemIcon>
               <ListItemText primary='Calendario de vacunación' />
             </ListItem>
+          </Link>
+          <Link to ="/ControlesMedicos" >
             <ListItem button>
               <ListItemIcon>
                 <InfoIcon />
               </ListItemIcon>
               <ListItemText primary='Información sobre controles médicos' />
               </ListItem>
+          </Link>
+          <Link to ="/Percentiles" >
             <ListItem button>
             <ListItemIcon>
               <InfoIcon />
             </ListItemIcon>
-            <ListItemText primary='Percentiles y parámetros generales de control' />            </ListItem>
+            <ListItemText primary='Percentiles y parámetros generales de control' />            
+            </ListItem>
+          </Link>
         </List>
       </Drawer>
       <main className={classes.content}>

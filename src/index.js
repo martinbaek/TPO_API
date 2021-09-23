@@ -22,6 +22,7 @@ ReactDOM.render(
   <Router history={hist}>
     <Switch>
       <Route path="/LogInPage" component={LogInPage}/>
+      <Route path="/Percentiles" component={Percentiles}/>
       <Route path="/Percentiles" component={LogInPage}/>
       <Route path="/ControlesMedicos" component={ControlesMedicos}/>
       <Route path="/LoggedPage" component={LoggedPage}/>

@@ -125,9 +125,9 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Nombre empresa
-          </Typography>
+          <Link to ="/" >
+          <Button color="inherit" >Nombre empresa</Button>
+          </Link>
           <Link to ="/LogInPage" className={classes.title}>
           <Button color="inherit" className={classes.title}>Login</Button>
           </Link>

@@ -10,7 +10,7 @@ function LoggedPage() {
   return (
     <div className="App">
 
-      <DrawerLogged/>
+      <Drawer/>
 
       <img src={CalendarioVacunacion} alt="calendario" width="1100" height="500"></img>
     </div>
