@@ -18,7 +18,9 @@ import OlvidoContrasenaPage from './OlvidoContrasenaPage';
 import ProfilePage from './ProfilePage';
 import Control from './Control';
 import ControlProfile  from './ControlProfile';
-
+import CrearControlGrid  from './componentes/CrarControlGrid';
+import SignUpControl  from './SignUpControl';
+import SignUnPaciente from './SignUnPaciente';
 
 var hist = createBrowserHistory();
 ReactDOM.render(
@@ -39,6 +41,9 @@ ReactDOM.render(
       <Route path="/OlvidoContrasenaPage" component={OlvidoContrasenaPage}/>
       <Route path="/Control" component={Control}/>
       <Route path="/ControlProfile" component={ControlProfile}/>
+      <Route path="/CrearControlGrid" component={CrearControlGrid}/>
+      <Route path="/SignUpControl" component={SignUpControl}/>
+      <Route path="/SignUnPaciente" component={SignUnPaciente}/>
       <Route path="/" component={PaginaInicial}/>
 
     </Switch>

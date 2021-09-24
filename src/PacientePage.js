@@ -6,6 +6,7 @@ import DrawerLogged from './componentes/DrawerLogged';
 import IconoPaciente from './componentes/IconoPaciente';
 
 
+
 function PacientePage() {
   return (
     <div className="App">

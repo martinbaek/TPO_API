@@ -117,7 +117,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Link to ="/" >
-          <Button color="inherit" >Nombre empresa</Button>
+          <Button color="inherit" >MEDIPED </Button>
           </Link>
         </Toolbar>
       </AppBar>

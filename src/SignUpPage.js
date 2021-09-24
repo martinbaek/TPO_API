@@ -4,6 +4,7 @@ import SignUp from './componentes/SignUp';
 import Button from '@material-ui/core/Button';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {Link} from "react-router-dom";
+import LogInPage from './LogInPage';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,7 +26,10 @@ function SignUpPage() {
       <h4>Si usted no conoce su código postal busquelo
            <a href="https://www.correoargentino.com.ar/formularios/cpa" target="_blank"> aqui</a>
       </h4>
-      <Button color='secondary' >Sign Up</Button>
+      <Link to ="./LogInPage" > 
+        <Button color='secondary' >Sign Up</Button>
+      </Link>
+      
     </div>
   );
 }

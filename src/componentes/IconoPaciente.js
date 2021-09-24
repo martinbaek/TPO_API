@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import {Link} from "react-router-dom";
 
+
 export default function ContainedButtons() {
   return (
     <Stack direction="column" spacing={2}>
@@ -21,7 +22,7 @@ export default function ContainedButtons() {
         Chico 3
       </Button>
       </Link>
-      <Link to="/PacienteProfile">
+      <Link to="/SignUnPaciente">
       <Button variant="contained" href="#contained-buttons" >
         Agregar Chico
       </Button>
