@@ -117,7 +117,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Link to ="/" >
-          <Button color="inherit" >Nombre empresa</Button>
+          <Button color="inherit" >MEDIPED</Button>
           </Link>
           <Link to ="/LogInPage" className={classes.title}>
           <Button color="inherit" className={classes.title}>Login</Button>

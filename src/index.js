@@ -36,6 +36,7 @@ ReactDOM.render(
       <Route path="/PacienteProfile" component={PacienteProfile}/>
       <Route path="/OlvidoContrasenaPage" component={OlvidoContrasenaPage}/>
       <Route path="/" component={PaginaInicial}/>
+      <Route path="/Control" component={OlvidoContrasenaPage}/>
 
     </Switch>
   </Router>,

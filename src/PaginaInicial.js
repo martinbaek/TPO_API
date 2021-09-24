@@ -10,7 +10,7 @@ function PaginaInicial() {
 
       <Drawer/>
       <h4>
-        NOMBRE!!! - Lideres en Medicina Pedíatrica.
+        MEDIPED - Lideres en Medicina Pedíatrica.
       </h4>
       <img src={Chicosjuntos} alt="juguemos" width="300" height="201"></img>
       <h4>
