@@ -132,7 +132,7 @@ export default function MiniDrawer() {
           <Button color="inherit" className={classes.title}>Login</Button>
           </Link>
           <Link to ="/SignInPage" >
-          <Button color="inherit" >Sign In</Button>
+          <Button color="inherit" >Sign Up</Button>
           </Link>
         </Toolbar>
       </AppBar>
