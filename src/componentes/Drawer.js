@@ -131,7 +131,7 @@ export default function MiniDrawer() {
           <Link to ="/LogInPage" className={classes.title}>
           <Button color="inherit" className={classes.title}>Login</Button>
           </Link>
-          <Link to ="/SignInPage" >
+          <Link to ="/SignUpPage" >
           <Button color="inherit" >Sign Up</Button>
           </Link>
         </Toolbar>

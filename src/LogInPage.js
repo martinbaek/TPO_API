@@ -16,7 +16,7 @@ function LogInPage() {
       <Link to="/OlvidoContrasenaPage">
       <h4>Me olvide la contraseña</h4>
       </Link>
-      <h4>Si usted no está registrado toque <Link to ="/SignInPage" >aqui</Link></h4>
+      <h4>Si usted no está registrado toque <Link to ="/SignUpPage" >aqui</Link></h4>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import './index.css';
 import ReportWebVitals from './ReportWebVitals';
 import PaginaInicial from './PaginaInicial';
 import LogInPage from './LogInPage';
-import SignInPage from './SignInPage';
+import SignUpPage from './SignUpPage';
 import LoggedPage from './LoggedPage';
 import PacientePage from './PacientePage';
 import Percentiles from './Percentiles';
@@ -29,7 +29,7 @@ ReactDOM.render(
       <Route path="/LoggedPage" component={LoggedPage}/>
       <Route path="/CalendarioPage" component={CalendarioPage}/>
       <Route path="/ReportWebVitals" component={ReportWebVitals}/>
-      <Route path="/SignInPage" component={SignInPage}/>
+      <Route path="/SignUpPage" component={SignUpPage}/>
       <Route path="/PacientePage" component={PacientePage}/>
       <Route path="/PacienteProfile" component={PacienteProfile}/>
       <Route path="/OlvidoContrasenaPage" component={OlvidoContrasenaPage}/>
