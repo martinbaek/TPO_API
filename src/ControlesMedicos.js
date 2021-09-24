@@ -20,11 +20,13 @@ function ControlesMedicos() {
       <Drawer/>
       <h4>
       Controles Médicos:
+      <br></br>
       </h4>
       <h4>
       Durante el control, el médico realizará un examen físico a su bebé. Mencioná cualquier preocupación
       que tengas o cualquier área que desees que el médico revise.
       </h4>
+      <br/>
       <h4>
        A continuación, te ofrecemos los conceptos básicos para tener en cuenta:
       </h4>
