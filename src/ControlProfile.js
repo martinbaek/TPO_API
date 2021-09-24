@@ -1,6 +1,7 @@
 import './App.css';
 import DrawerLogged from './componentes/DrawerLogged';
 import {Link} from "react-router-dom";
+import ControlGrid from './componentes/ControlGrid';
 
 
 

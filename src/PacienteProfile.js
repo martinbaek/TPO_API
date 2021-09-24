@@ -26,7 +26,7 @@ function PacienteProfile() {
       <h4>
         Controles pediátricos:
       </h4>
-      <Link to="/Control.js" >
+      <Link to="/Control" >
       <Button variant="contained" href="#contained-buttons" > 
         Controles:
       </Button>

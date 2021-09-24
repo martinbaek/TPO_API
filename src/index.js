@@ -16,6 +16,8 @@ import CalendarioPage from './CalendarioPage';
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import OlvidoContrasenaPage from './OlvidoContrasenaPage';
 import ProfilePage from './ProfilePage';
+import Control from './Control';
+import ControlProfile  from './ControlProfile';
 
 
 var hist = createBrowserHistory();
@@ -35,8 +37,9 @@ ReactDOM.render(
       <Route path="/PacientePage" component={PacientePage}/>
       <Route path="/PacienteProfile" component={PacienteProfile}/>
       <Route path="/OlvidoContrasenaPage" component={OlvidoContrasenaPage}/>
+      <Route path="/Control" component={Control}/>
+      <Route path="/ControlProfile" component={ControlProfile}/>
       <Route path="/" component={PaginaInicial}/>
-      <Route path="/Control" component={OlvidoContrasenaPage}/>
 
     </Switch>
   </Router>,

@@ -39,8 +39,10 @@ export default function BasicGrid() {
         <Grid item xs={4}>
           <Item>Estudios a realizar</Item>
         </Grid>
+        <br>
+        </br>
         <Grid item xs={4}>
-          <Item>Resultados</Item>
+          <Item> Resultados</Item>
           <input type="file" name="Resultado"></input>
         </Grid>
       </Grid>
