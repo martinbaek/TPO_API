@@ -28,6 +28,8 @@ function ControlesMedicos() {
       <h4>
        A continuación, te ofrecemos los conceptos básicos para tener en cuenta:
       </h4>
+      <br> 
+      </br> 
       <p>
         • Cabeza:
         <img src={Cabeza} align="left" width="200" height="101"></img>
@@ -41,7 +43,8 @@ function ControlesMedicos() {
            La fontanela más grande en el frente a menudo se cierra alrededor de los 18 meses.
         </h4>
       </p>
-      
+      <br> 
+      </br> 
       <p>
         • Orejas:
         <img src={orejas} align="left" width="200" height="101"></img>
@@ -52,8 +55,8 @@ function ControlesMedicos() {
           También observará la respuesta de tu bebé a diferentes sonidos (¡incluido el tuyo!).
         </h4>
       </p>
-
-      
+      <br> 
+      </br>       
       <p>
         • Ojos:
         <img src={ojos} align="left" width="200" height="101"></img>
@@ -61,7 +64,8 @@ function ControlesMedicos() {
         El médico observará los ojos de tu bebé con un instrumento llamado oftalmoscopio.
         </h4>
       </p>
-
+      <br> 
+      </br> 
       <p>
         • Boca:
         <img src={boca} align="left" width="200" height="101"></img>
@@ -69,7 +73,8 @@ function ControlesMedicos() {
         El médico revisará paladar de la boca de tu bebé para ver si hay una abertura. 
         </h4>
       </p>
-     
+      <br> 
+      </br> 
       <p>
         • Piel:
         <img src={piel} align="left" width="200" height="101"></img>
@@ -77,6 +82,8 @@ function ControlesMedicos() {
         Durante el examen se podrían identificar varias enfermedades de la piel, marcas de nacimiento o sarpullidos.
         </h4>
       </p>
+      <br> 
+      </br> 
       <p>
         • Corazón y pulmones:
         <img src={corazon} align="left" width="200" height="101"></img>
@@ -84,7 +91,8 @@ function ControlesMedicos() {
         El médico utilizará un estetoscopio para detectar cualquier sonido o ritmo cardíaco anormal o dificultades para respirar
         </h4>
       </p>
-
+      <br> 
+      </br> 
       <p>
         • Abdomen:
         <img src={abdomen} align="left" width="200" height="101"></img>
@@ -92,7 +100,8 @@ function ControlesMedicos() {
         Al presionar suavemente el vientre de tu bebé, el médico puede detectar sensibilidad, órganos agrandados o masas inusuales.
         </h4>
       </p>
-
+      <br> 
+      </br> 
       <p>
         • Caderas y Piernas:
         <img src={caderas} align="left" width="200" height="101"></img>
@@ -100,7 +109,8 @@ function ControlesMedicos() {
         El médico podría mover las piernas de tu bebé para controlar que no haya dislocación u otros problemas con las articulaciones de la cadera.
         </h4>
       </p>
-
+      <br> 
+      </br> 
       <p>
         • Genitales:
         <img src={genitales} align="left" width="200" height="101"></img>
