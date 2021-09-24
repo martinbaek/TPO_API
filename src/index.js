@@ -15,6 +15,7 @@ import { createBrowserHistory } from 'history';
 import CalendarioPage from './CalendarioPage';
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import OlvidoContrasenaPage from './OlvidoContrasenaPage';
+import ProfilePage from './ProfilePage';
 
 
 var hist = createBrowserHistory();
@@ -23,6 +24,7 @@ ReactDOM.render(
   <Router history={hist}>
     <Switch>
       <Route path="/LogInPage" component={LogInPage}/>
+      <Route path="/ProfilePage" component={ProfilePage}/>
       <Route path="/Percentiles" component={Percentiles}/>
       <Route path="/Percentiles" component={LogInPage}/>
       <Route path="/ControlesMedicos" component={ControlesMedicos}/>

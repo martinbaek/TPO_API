@@ -22,6 +22,9 @@ import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import InfoIcon from '@material-ui/icons/Info';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import ThreeDRotation from '@material-ui/icons/ThreeDRotation';
+import RecentActorsIcon from '@mui/icons-material/RecentActors';
 import {Link} from "react-router-dom";
 
 const drawerWidth =  450;
@@ -154,10 +157,18 @@ export default function MiniDrawer() {
         </div>
         <Divider />
         <List>
+        <Link to ="/ProfilePage" >
+            <ListItem button>
+              <ListItemIcon>
+                <AccountBoxIcon />
+              </ListItemIcon>
+              <ListItemText primary='Perfil' />
+            </ListItem>
+          </Link>
         <Link to ="/PacientePage" >
             <ListItem button>
               <ListItemIcon>
-                <CalendarTodayIcon />
+                <RecentActorsIcon />
               </ListItemIcon>
               <ListItemText primary='Paciente/s' />
             </ListItem>

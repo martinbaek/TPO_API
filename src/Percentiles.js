@@ -4,7 +4,7 @@ import Drawer from './componentes/Drawer';
 import Chicosjuntos from "./img/Chicosjuntos.jpg";
 import DrawerLogged from './componentes/DrawerLogged';
 import IconoPaciente from './componentes/IconoPaciente';
-import ProfileGrid from './componentes/ProfileGrid';
+import ProfileGrid from './componentes/PacienteGrid';
 import EditButton from './componentes/EditButton';
 import CalendarioVac from './componentes/CalendarioVac';
 import percentil from "./img/percentil.jpg"

@@ -3,7 +3,6 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import {Link} from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -29,28 +28,13 @@ export default function BasicGrid() {
           <Item>mail</Item>
         </Grid>
         <Grid item xs={4}>
-          <Item>Nro de telefono</Item>
+          <Item>grupo sanguineo</Item>
         </Grid>
         <Grid item xs={4}>
-          <Item>Obra Social</Item>
+          <Item>alergia</Item>
         </Grid>
         <Grid item xs={4}>
-          <Item>Plan</Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>Afiliado</Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>Dirección</Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>CP</Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>Ciudad</Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item><Link to="/PacientePage">Pacientes</Link></Item>
+          <Item>enfermedades Cronicas</Item>
         </Grid>
       </Grid>
     </Box>
