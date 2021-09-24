@@ -13,7 +13,11 @@ function OlvidoContrasenaPage() {
       <OlvidoMail/>
       <Button color='secondary' >Enviar mail</Button>
       <h4>Si usted no está registrado toque <Link to ="/SignInPage" >aqui</Link></h4>
+      <Link to ="./LogInPage" > 
+        <Button color='secondary' >Log In</Button>
+      </Link>
     </div>
+    
   );
 }
 
