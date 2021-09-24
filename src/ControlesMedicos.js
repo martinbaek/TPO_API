@@ -104,6 +104,7 @@ function ControlesMedicos() {
       </br> 
       <p>
         • Caderas y Piernas:
+        
         <img src={caderas} align="left" width="200" height="101"></img>
         <h4>
         El médico podría mover las piernas de tu bebé para controlar que no haya dislocación u otros problemas con las articulaciones de la cadera.
@@ -113,8 +114,9 @@ function ControlesMedicos() {
       </br> 
       <p>
         • Genitales:
-        <img src={genitales} align="left" width="200" height="101"></img>
-        <h4>
+      
+        <img  src={genitales} align="left" width="200" height="101"></img>
+        <h4>  
         El médico inspeccionará los genitales de tu bebé para detectar sensibilidad, bultos u otros signos de infección.
         </h4>
       </p>
