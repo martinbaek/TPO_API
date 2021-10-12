@@ -3,16 +3,22 @@ import Bienvenida from './componentes/Bienvenida';
 import Drawer from './componentes/Drawer';
 import Chicosjuntos from "./img/Chicosjuntos.jpg";
 import prueba from "./img/prueba.png"
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 
 function PaginaInicial() {
   return (
-    <div className="App">
+    <div className="App-principal">
 
       <Drawer/>
-      <h4>
+      <Box sx={{ 
+        p: 1 ,
+        bgcolor: 'primary.dark',
+        opacity: [0.5, 0.5, 0.9],
+       }}>
+      <h1>
         MEDIPED - Lideres en Medicina Pedíatrica.
-      </h4>
-      <img src={Chicosjuntos} alt="juguemos" width="300" height="201"></img>
+      </h1>
       <h4>
         Asumimos el compromiso de brindar el servicio más completo para sus niños, 
         acompañado de información útil y un sólido respaldo tecnológico.
@@ -30,6 +36,16 @@ function PaginaInicial() {
         necesaria actualizada, y estamos a su disposición ante cualquier inconveniente.
 
       </h4>   
+      </Box>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <h4>
       <img src={prueba} alt="juguemos" width="800" height="201"></img>
       </h4>

@@ -8,3 +8,11 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+.App-principal{
+  text-align: center;
+  align-items: center;
+  background-image: url("./img/Chicosjuntos.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
