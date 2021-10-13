@@ -10,13 +10,17 @@ function LogInPage() {
       <DrawerLogIn/>
       <h1>LOG IN</h1>
       <LogIn/>
-      <Link to="/LoggedPage">
-      <Button color='secondary' >Log In</Button>
+      <Link to="/LoggedPage" style={{ textDecoration: 'none' }}>
+      <Button variant="outlined" >Log In</Button>
       </Link>
-      <Link to="/OlvidoContrasenaPage">
-      <h4>Me olvide la contraseña</h4>
+      <br/>
+      <Link to="/OlvidoContrasenaPage" style={{ textDecoration: 'none' }}>
+      <Button variant="text" ><h4>Me olvide la contraseña</h4></Button>
       </Link>
-      <h4>Si usted no está registrado toque <Link to ="/SignUpPage" >aqui</Link></h4>
+      <h4>Si usted no está registrado toque <Link to ="/SignUpPage" style={{ textDecoration: 'none'}}>
+      <Button variant="text" >aqui</Button>
+      </Link>
+      </h4>
     </div>
   );
 }

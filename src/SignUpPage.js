@@ -22,12 +22,14 @@ function SignUpPage() {
 
       <DrawerLogIn/>
       <SignUp/>
-      <h4>Si usted está registrado toque <Link to ="/LogInPage" >aqui</Link></h4>
+      <h4>Si usted está registrado toque <Link to ="/SignUpPage" style={{ textDecoration: 'none'}}>
+      <Button variant="text" >aqui</Button>
+      </Link></h4>
       <h4>Si usted no conoce su código postal busquelo
            <a href="https://www.correoargentino.com.ar/formularios/cpa" target="_blank"> aqui</a>
       </h4>
-      <Link to ="./LogInPage" > 
-        <Button color='secondary' >Sign Up</Button>
+      <Link to ="./LogInPage" style={{ textDecoration: 'none'}}> 
+        <Button variant="outlined" >Sign Up</Button>
       </Link>
       
     </div>

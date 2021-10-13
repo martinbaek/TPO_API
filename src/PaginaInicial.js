@@ -22,16 +22,13 @@ function PaginaInicial() {
       <h4>
         Asumimos el compromiso de brindar el servicio más completo para sus niños, 
         acompañado de información útil y un sólido respaldo tecnológico.
-      </h4>
-      <h4>
+        <br/>
         Desde nuestro portal podrán visualizar los turnos pendientes de cada hijo, 
         y también realizar los nuevos. 
-      </h4> 
-      <h4>
+        <br/>
         Además, podrán cargar los estudios médicos para poder 
         llevar un control ordenado de cada uno de ellos. 
-      </h4>  
-      <h4>
+        <br/>
         Le brindaremos toda la información 
         necesaria actualizada, y estamos a su disposición ante cualquier inconveniente.
 

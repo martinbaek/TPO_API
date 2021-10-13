@@ -116,8 +116,8 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Link to ="/" >
-          <Button color="inherit" >MEDIPED </Button>
+          <Link to ="/" style={{ textDecoration: 'none' }}>
+          <Button variant="text"><h1>MEDIPED</h1></Button>
           </Link>
         </Toolbar>
       </AppBar>
@@ -141,7 +141,7 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-           <Link to ="/CalendarioPage" >
+           <Link to ="/CalendarioPage" style={{ textDecoration: 'none'}}>
             <ListItem button>
               <ListItemIcon>
                 <CalendarTodayIcon />
@@ -149,7 +149,7 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary='Calendario de vacunación' />
             </ListItem>
           </Link>
-          <Link to ="/ControlesMedicos" >
+          <Link to ="/ControlesMedicos" style={{ textDecoration: 'none'}}>
             <ListItem button>
               <ListItemIcon>
                 <InfoIcon />
@@ -157,7 +157,7 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary='Información sobre controles médicos' />
               </ListItem>
           </Link>
-          <Link to ="/Percentiles" >
+          <Link to ="/Percentiles" style={{ textDecoration: 'none'}}>
             <ListItem button>
             <ListItemIcon>
               <InfoIcon />
@@ -170,6 +170,9 @@ export default function PersistentDrawerLeft() {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Typography paragraph>
+          <br/>
+          <br/>
+          <br/>
         </Typography>
       </main>
     </Box>

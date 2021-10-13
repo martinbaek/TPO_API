@@ -11,10 +11,13 @@ function OlvidoContrasenaPage() {
       <DrawerLogIn/>
       <h1>Olvido de contraseña</h1>
       <OlvidoMail/>
-      <Button color='secondary' >Enviar mail</Button>
-      <h4>Si usted no está registrado toque <Link to ="/SignInPage" >aqui</Link></h4>
+      <Button variant="outlined" >Enviar mail</Button>
+      <h4>Si usted no está registrado toque <Link to ="/SignUpPage" style={{ textDecoration: 'none'}}>
+      <Button variant="text" >aqui</Button>
+      </Link>
+      </h4>
       <Link to ="./LogInPage" > 
-        <Button color='secondary' >Log In</Button>
+        <Button variant="outlined" >Log In</Button>
       </Link>
     </div>
     
