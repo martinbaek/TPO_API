@@ -13,13 +13,13 @@ function PaginaInicial() {
       <Drawer/>
       <Box sx={{ 
         p: 1 ,
-        bgcolor: 'primary.dark',
+        bgcolor: 'primary.light',
         opacity: [0.5, 0.5, 0.9],
        }}>
       <h1>
         MEDIPED - Lideres en Medicina Pedíatrica.
       </h1>
-      <h4>
+      <h2>
         Asumimos el compromiso de brindar el servicio más completo para sus niños, 
         acompañado de información útil y un sólido respaldo tecnológico.
         <br/>
@@ -32,7 +32,7 @@ function PaginaInicial() {
         Le brindaremos toda la información 
         necesaria actualizada, y estamos a su disposición ante cualquier inconveniente.
 
-      </h4>   
+      </h2>   
       </Box>
       <br/>
       <br/>

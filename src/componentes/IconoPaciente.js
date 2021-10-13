@@ -7,22 +7,22 @@ import {Link} from "react-router-dom";
 export default function ContainedButtons() {
   return (
     <Stack direction="column" spacing={2}>
-      <Link to="/PacienteProfile">
+      <Link to="/PacienteProfile" style={{ textDecoration: 'none' }}>
       <Button variant="contained" href="#contained-buttons" >
         Chico 1
       </Button>
       </Link>
-      <Link to="/PacienteProfile">
+      <Link to="/PacienteProfile" style={{ textDecoration: 'none' }}>
       <Button variant="contained" href="#contained-buttons" >
         Chico 2
       </Button>
       </Link>
-      <Link to="/PacienteProfile">
+      <Link to="/PacienteProfile" style={{ textDecoration: 'none' }}>
       <Button variant="contained" href="#contained-buttons" >
         Chico 3
       </Button>
       </Link>
-      <Link to="/SignUnPaciente">
+      <Link to="/SignUnPaciente" style={{ textDecoration: 'none' }}>
       <Button variant="contained" href="#contained-buttons" >
         Agregar Chico
       </Button>

@@ -8,11 +8,17 @@ import CalendarioVacunacion from "./img/CalendarioVacunacion.jpg";
 
 function LoggedPage() {
   return (
-    <div className="App">
+    <div className="App-principal">
 
       <Drawer/>
 
       <img src={CalendarioVacunacion} alt="calendario" width="1100" height="500"></img>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
     </div>
   );
 }

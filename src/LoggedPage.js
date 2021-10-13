@@ -12,7 +12,7 @@ function LoggedPage() {
       <DrawerLogged/>
       <Box sx={{ 
         p: 1 ,
-        bgcolor: 'primary.dark',
+        bgcolor: 'primary.light',
         opacity: [0.5, 0.5, 0.9],
        }}>
       <h1>
