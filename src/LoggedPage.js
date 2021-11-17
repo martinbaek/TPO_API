@@ -3,6 +3,7 @@ import Bienvenida from './componentes/Bienvenida';
 import Drawer from './componentes/Drawer';
 import Chicosjuntos from "./img/Chicosjuntos.jpg";
 import DrawerLogged from './componentes/DrawerLogged';
+import React, { Component }  from 'react';
 
 function LoggedPage() {
   return (

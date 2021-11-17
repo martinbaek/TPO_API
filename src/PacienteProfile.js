@@ -1,4 +1,5 @@
 import './App.css';
+import React, { Component }  from 'react';
 import Bienvenida from './componentes/Bienvenida';
 import Drawer from './componentes/Drawer';
 import Chicosjuntos from "./img/Chicosjuntos.jpg";

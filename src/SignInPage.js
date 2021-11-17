@@ -4,6 +4,7 @@ import SignIn from './componentes/SignIn';
 import Button from '@material-ui/core/Button';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {Link} from "react-router-dom";
+import React, { Component }  from 'react';
 
 const useStyles = makeStyles((theme) => ({
     root: {

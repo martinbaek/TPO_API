@@ -8,6 +8,7 @@ import ProfileGrid from './componentes/ProfileGrid';
 import EditButton from './componentes/EditButton';
 import CalendarioVac from './componentes/CalendarioVac';
 import percentil from "./img/percentil.jpg"
+import React, { Component }  from 'react';
 
 
 

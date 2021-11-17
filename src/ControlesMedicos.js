@@ -10,7 +10,7 @@ import corazon from "./img/corazon.jpg"
 import caderas from "./img/caderas.jpg"
 import abdomen from "./img/abdomen.jpg"
 import genitales from "./img/genitales.jpg"
-
+import React, { Component }  from 'react';
 
 
 function ControlesMedicos() {
