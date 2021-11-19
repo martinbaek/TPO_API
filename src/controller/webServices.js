@@ -4,6 +4,7 @@ console.log("url",urlApi);
 
 const urlWebServices = {
     login:urlApi +"api/users/login",
+    registration:urlApi +"api/users/registration",
     uploadFileImg: urlApi + "utils/uploadImg",
     guardarImgUser: urlApi + "api/users/guardarImgUser",
     getImgUser: urlApi + "api/users/imgUserByMail",
