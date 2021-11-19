@@ -5,9 +5,6 @@ import Button from '@material-ui/core/Button';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {Link} from "react-router-dom";
 
-import React, { useEffect } from "react";
-import {Redirect} from "react-router-dom";
-
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
