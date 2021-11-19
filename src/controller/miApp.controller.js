@@ -223,8 +223,8 @@ export const registration= async function(registration)
                     //guardo token
                     localStorage.setItem("x",data.loginUser.token);
                     //guardo usuario logueado
-                    let user = data.loginUser.user;
-                    localStorage.setItem("nombre",user.name);
+                    let user = data.loginUser.user; 
+                    localStorage.setItem("name",user.name);
                     localStorage.setItem("email",user.email);
                     localStorage.setItem('password', user.password);
                     localStorage.setItem('dni', user.dni);
@@ -248,7 +248,7 @@ export const registration= async function(registration)
     {
         console.log("error",error);
     };
-    }
+}
 
 
 export const agregarNino= async function(agregarNino)
@@ -264,7 +264,7 @@ export const agregarNino= async function(agregarNino)
     formData.append('medicamentos', agregarNino.medicamentos);
     formData.append('obs', agregarNino.obs);
     formData.append('estudios', agregarNino.estudios);
-    formData.append('resultado', agregarNino.resultado);
+    formData.append('resultados', agregarNino.resultados);
   
     //console.log("dato",formData);
     //console.log("url",url);
@@ -293,15 +293,15 @@ export const agregarNino= async function(agregarNino)
                     //guardo token
                     localStorage.setItem("x",data.loginUser.token);
                     //guardo usuario logueado
-                    let nino = data.loginUser.nino;
-                    localStorage.setItem("name",nino.name);
-                    localStorage.setItem("peso",nino.peso);
-                    localStorage.setItem('altura', nino.altura);
-                    localStorage.setItem('diametroCabeza', nino.diametroCabeza);
-                    localStorage.setItem('medicamentos', nino.medicamentos);
-                    localStorage.setItem('obs', nino.obs);
-                    localStorage.setItem('estudios', nino.estudios);
-                    localStorage.setItem('resultado', nino.resultado);
+                    let user = data.loginUser.nino;
+                    localStorage.setItem("name",user.name);
+                    localStorage.setItem("peso",user.peso);
+                    localStorage.setItem('altura', user.altura);
+                    localStorage.setItem('diametroCabeza', user.diametroCabeza);
+                    localStorage.setItem('medicamentos', user.medicamentos);
+                    localStorage.setItem('obs', user.obs);
+                    localStorage.setItem('estudios', user.estudios);
+                    localStorage.setItem('resultados', user.resultados);
   
                     return ({rdo:0,mensaje:"Ok"});//correcto
                 }
