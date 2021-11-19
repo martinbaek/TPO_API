@@ -250,3 +250,73 @@ export const registration= async function(registration)
     };
     }
 
+
+export const agregarNino= async function(agregarNino)
+    {
+        //url webservices
+    let url = urlWebServices.agregarNino;
+    //armo json con datos
+    const formData = new URLSearchParams();
+    formData.append('name', agregarNino.name);
+    formData.append('peso', agregarNino.peso);
+    formData.append('altura', agregarNino.altura);
+    formData.append('diametroCabeza', agregarNino.diametroCabeza);
+    formData.append('medicamentos', agregarNino.medicamentos);
+    formData.append('obs', agregarNino.obs);
+    formData.append('estudios', agregarNino.estudios);
+    formData.append('resultado', agregarNino.resultado);
+  
+    //console.log("dato",formData);
+    //console.log("url",url);
+    try
+    {
+        let response = await fetch(url,{
+            method: 'POST', // or 'PUT'
+            mode: "cors",
+            headers:{
+                'Accept':'application/x-www-form-urlencoded',
+               // 'x-access-token': WebToken.webToken,
+                'Origin':'http://localhost:3000',
+                'Content-Type': 'application/x-www-form-urlencoded'},
+            body: formData,
+            
+        });
+        
+        let rdo = response.status;
+        console.log("response",response);
+        let data = await response.json();
+        console.log("jsonresponse",data);
+            switch(rdo)
+            {
+                case 201:
+                {
+                    //guardo token
+                    localStorage.setItem("x",data.loginUser.token);
+                    //guardo usuario logueado
+                    let nino = data.loginUser.nino;
+                    localStorage.setItem("name",nino.name);
+                    localStorage.setItem("peso",nino.peso);
+                    localStorage.setItem('altura', nino.altura);
+                    localStorage.setItem('diametroCabeza', nino.diametroCabeza);
+                    localStorage.setItem('medicamentos', nino.medicamentos);
+                    localStorage.setItem('obs', nino.obs);
+                    localStorage.setItem('estudios', nino.estudios);
+                    localStorage.setItem('resultado', nino.resultado);
+  
+                    return ({rdo:0,mensaje:"Ok"});//correcto
+                }
+                default:
+                {
+                    //otro error
+                    return ({rdo:1,mensaje:"Ha ocurrido un error"});                
+                }
+            }
+    }
+    catch(error)
+    {
+        console.log("error",error);
+    };
+    }
+
+
+    
