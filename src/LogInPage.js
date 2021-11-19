@@ -1,4 +1,4 @@
-//import React, { useEffect } from "react";
+import React, { useEffect } from "react";
 import {Redirect} from "react-router-dom";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -19,12 +19,15 @@ import CustomInput from "./components/CustomInput/CustomInput.js";
 import styles from   "./components/css/loginPage.js";
 //import image from "./img/landing-bg.jpg";
 
+import DrawerLogIn from './componentes/DrawerLogIn';
+import {Link} from "react-router-dom";
+
 //importo llamada a endpoint
-import {login} from "../controller/miApp.controller";
+import {login} from "./controller/miApp.controller";
 
 const useStyles = makeStyles(styles);
 
-function LogInPage() {
+function LogInPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   const [email,setEmail]=React.useState('');
   const[password,setPassword]=React.useState('');
