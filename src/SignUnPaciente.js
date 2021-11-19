@@ -33,7 +33,7 @@ const useStyles = makeStyles(styles);
 
 
 function SignUnPaciente (props){
-  const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
+  const [cardAnimaton,setCardAnimation] = React.useState("cardHidden");
   const [name,setName]=React.useState('');
   const [peso,setPeso]=React.useState('');
   const [altura,setAltura]=React.useState('');
@@ -41,7 +41,7 @@ function SignUnPaciente (props){
   const [medicamentos,setMedicamentos]=React.useState('');
   const [obs,setObs]=React.useState('');
   const [estudios,setEstudios]=React.useState('');
-  const [resultado,setResultado]=React.useState('');
+  const [resultados,setResultados]=React.useState('');
   const [usuarioValido,setUsuarioValido]=React.useState(false);
 
 
@@ -80,8 +80,8 @@ function SignUnPaciente (props){
   setEstudios(event.target.value);
   }
 
-  const handleResultado=(event)=>{
-  setResultado(event.target.value);
+  const handleResultados=(event)=>{
+  setResultados(event.target.value);
   }
 
   const validarSign= async function()
@@ -94,7 +94,8 @@ function SignUnPaciente (props){
         estudios : estudios,
         medicamentos: medicamentos,
         obs: obs,
-        estudios: resultado,
+        estudios: estudios,
+        resultados: resultados,
         
       }
       agregarNino(datos);
@@ -106,7 +107,7 @@ function SignUnPaciente (props){
   //Valido campos y llamo endpoint
   const Signup=()=>
   {
-    if (name!=="" )
+    if (name!=="" && peso!=="")
     {
       validarSign();
     }
@@ -233,13 +234,13 @@ const redirect= ()=>{
 
             <CustomInput
               labelText="Resultado..."
-              id="resultado"
+              id="resultados"
               formControlProps={{
                 fullWidth: true
               }}
               inputProps={{
-                type: "resultado",
-                onChange: (event) => handleResultado(event),
+                type: "resultados",
+                onChange: (event) => handleResultados(event),
                 
                 
               }}
@@ -247,9 +248,9 @@ const redirect= ()=>{
             <Button 
               simple color="primary" 
               size="lg"
-              onClick={SignUnPaciente}
+              onClick={Signup}
             >
-             SignUnPaciente
+             Crear paciente
             </Button>
           
         
