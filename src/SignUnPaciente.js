@@ -35,6 +35,9 @@ const useStyles = makeStyles(styles);
 function SignUnPaciente (props){
   const [cardAnimaton,setCardAnimation] = React.useState("cardHidden");
   const [name,setName]=React.useState('');
+  const [nacimiento,setNacimiento]=React.useState('');
+  const [email,setEmail]=React.useState('');
+  /*
   const [peso,setPeso]=React.useState('');
   const [altura,setAltura]=React.useState('');
   const [diametroCabeza,setDiametroCabeza]=React.useState('');
@@ -42,8 +45,8 @@ function SignUnPaciente (props){
   const [obs,setObs]=React.useState('');
   const [estudios,setEstudios]=React.useState('');
   const [resultados,setResultados]=React.useState('');
+  */
   const [usuarioValido,setUsuarioValido]=React.useState(false);
-
 
   setTimeout(function() {
     setCardAnimation("");
@@ -55,7 +58,13 @@ function SignUnPaciente (props){
   const handleName=(event)=>{
       setName(event.target.value);
   }
-
+  const handleNacimiento=(event)=>{
+      setNacimiento(event.target.value);
+  }
+  const handleEmail=(event)=>{
+    setEmail(event.target.value);
+}
+  /*
   const handlePeso=(event)=>{
     setPeso(event.target.value);
 
@@ -83,11 +92,15 @@ function SignUnPaciente (props){
   const handleResultados=(event)=>{
   setResultados(event.target.value);
   }
+  */
 
   const validarSign= async function()
   {
       let datos = {
         name: name,
+        nacimiento: nacimiento,
+        email: email,
+        /*
         peso: peso,
         altura: altura,
         diametroCabeza : diametroCabeza,
@@ -96,7 +109,7 @@ function SignUnPaciente (props){
         obs: obs,
         estudios: estudios,
         resultados: resultados,
-        
+        */
       }
       agregarNino(datos);
       setUsuarioValido(true);
@@ -107,7 +120,7 @@ function SignUnPaciente (props){
   //Valido campos y llamo endpoint
   const Signup=()=>
   {
-    if (name!=="" && peso!=="")
+    if (name!=="" && nacimiento!=="")
     {
       validarSign();
     }
@@ -155,18 +168,19 @@ const redirect= ()=>{
        />
 
        <CustomInput
-              labelText="Peso..."
-              id="peso"
+              labelText="Nacimiento..."
+              id="nacimiento"
               formControlProps={{
                 fullWidth: true
               }}
               inputProps={{
                 type: "peso",
-                onChange: (event) => handlePeso(event),
+                onChange: (event) => handleNacimiento(event),
                 
               }}
        />
-
+      {
+      /* 
        <CustomInput
               labelText="Altura..."
               id="altura"
@@ -245,6 +259,8 @@ const redirect= ()=>{
                 
               }}
             />
+            */
+            }
             <Button 
               simple color="primary" 
               size="lg"

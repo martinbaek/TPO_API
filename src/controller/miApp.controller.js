@@ -257,7 +257,10 @@ export const agregarNino= async function(agregarNino)
     let url = urlWebServices.agregarNino;
     //armo json con datos
     const formData = new URLSearchParams();
+    formData.append('email', localStorage.getItem("email"));
     formData.append('name', agregarNino.name);
+    formData.append('nacimiento', agregarNino.nacimiento);
+    /*
     formData.append('peso', agregarNino.peso);
     formData.append('altura', agregarNino.altura);
     formData.append('diametroCabeza', agregarNino.diametroCabeza);
@@ -265,7 +268,7 @@ export const agregarNino= async function(agregarNino)
     formData.append('obs', agregarNino.obs);
     formData.append('estudios', agregarNino.estudios);
     formData.append('resultados', agregarNino.resultados);
-  
+    */
     //console.log("dato",formData);
     //console.log("url",url);
     try
@@ -295,6 +298,9 @@ export const agregarNino= async function(agregarNino)
                     //guardo usuario logueado
                     let user = data.loginUser.nino;
                     localStorage.setItem("name",user.name);
+                    localStorage.setItem("nacimiento",user.nacimiento);
+                    localStorage.setItem("email",user.email);
+                    /*
                     localStorage.setItem("peso",user.peso);
                     localStorage.setItem('altura', user.altura);
                     localStorage.setItem('diametroCabeza', user.diametroCabeza);
@@ -302,7 +308,7 @@ export const agregarNino= async function(agregarNino)
                     localStorage.setItem('obs', user.obs);
                     localStorage.setItem('estudios', user.estudios);
                     localStorage.setItem('resultados', user.resultados);
-  
+                    */
                     return ({rdo:0,mensaje:"Ok"});//correcto
                 }
                 default:
