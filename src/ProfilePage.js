@@ -19,7 +19,7 @@ import GridItem from "./components/Grid/GridItem.js";
 //import CustomFileInput from ".cp,`pmemts/CustomFileInput/CustomFileInput.js";
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 import Button from "./components/CustomButtons/Button.js";
-import CardTemaBoton from "./components/Card/CardTemaBoton";
+import Card from "./components/Card/Card";
 //import CartTema from "./Card/CardTema";
 
 const useStyles = makeStyles(styles);
@@ -27,28 +27,65 @@ const useStyles = makeStyles(styles);
 function ProfilePage(props) {
   const classes = useStyles();
   const { ...rest } = props;
-  const perfilClass = classNames(
-    classes.imgRaised,
-    classes.imgRoundedCircle,
-    classes.imgFluid
-  );
+
   const [usuario,setUsuario]=React.useState('');
+  const [email,setEmail]=React.useState('');
+  const[name,setName]=React.useState('');
+  const[dni,setDni]=React.useState('');
+  const[obraSocial,setObraSocial]=React.useState('');
+  const[plan,setPlan]=React.useState('');
+  const[afiliado,setAfiliado]=React.useState('');
+  const[direccion,setDireccion]=React.useState('');
+  const[cp,setCp]=React.useState('');
+  const[ciudad,setCiudad]=React.useState('');
+  const[usuarioValido,setUsuarioValido]=React.useState(false);
+
+  const handleEmail=(event)=>{
+    setEmail(event.target.value);
+  }
+  const handleName=(event)=>{    
+    setName(event.target.value);
+  }
+  const handleDni=(event)=>{    
+    setDni(event.target.value);
+  }
+  const handleObraSocial=(event)=>{    
+    setObraSocial(event.target.value);
+  }
+  const handlePlan=(event)=>{    
+    setPlan(event.target.value);
+  }
+  const handleAfiliado=(event)=>{    
+    setAfiliado(event.target.value);
+  }
+  const handleDireccion=(event)=>{    
+    setDireccion(event.target.value);
+  }
+  const handleCp=(event)=>{    
+    setCp(event.target.value);
+  }
+  const handleCiudad=(event)=>{    
+    setCiudad(event.target.value);
+  }
 
   console.log("cargacomponente");
   useEffect(()=>{
     async function componentDidMount() 
     {
       //traer imagenes de User
-      let rdo = await getUserByMail();
-      setUsuario(rdo); 
+      let p = await getUserByMail();
+      setUsuario(p); 
+      setUsuarioValido(true);
+      console.log(usuario)
     }
     componentDidMount();
   },[]);
 
-  const getUserByMail = async function(){
+  const getPerfil = async function(){
     console.log("Perfil",usuario)
     let rdo = await getUserByMail();
     setUsuario(rdo);
+    setUsuarioValido(true);
 
     console.log("Perfil",usuario)
     console.log("rdoPerfil",rdo)
@@ -57,25 +94,32 @@ function ProfilePage(props) {
 
   return (
     <div>
+      <DrawerLogged/>
     <div className={classNames(classes.main, classes.mainRaised)}>
       <div>
         <div className={classes.container}>
-          
           <GridContainer>
             {usuario => {          
               let mail = mail;
               let name = name;
+              let dni = dni;
+              let obraSocial = obraSocial;
+              let plan = plan;
+              let afiliado = afiliado;
+              let direccion = direccion;
+              let cp = cp;
+              let ciudad = ciudad;
               console.log("Perfil",usuario);
               return (
                 <GridItem xs={12} sm={4} md={4} className={classes.GridItem}>
-                  <CardTemaBoton
+                  <Card
                     color={"gray"}
                     subtitulo={""}
                     colorBoton= "rose"
                     titulo={mail}
                   >
-                  </CardTemaBoton>
-                  
+                  </Card>
+                  {usuario.mail}
                 </GridItem>
               );
             }}

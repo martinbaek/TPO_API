@@ -343,22 +343,26 @@ export const getUserByMail = async function()
                 'x-access-token': localStorage.getItem('x'),
                 'Origin':'http://localhost:3000',
                 'Content-Type': 'application/x-www-form-urlencoded'},
-            body:formData
+            body: formData,
         });
-        if (response.status===200)
-        {
-            let data = await response.json();
-            console.log("encontrado",data);
-            let usuario = data.loginUser;
-            return usuario;
-        }
-        else
-        {
-            let vacio=[];
-            console.log("No hay imagenes")
-            return (vacio);
-            
-        }
+        let rdo = response.status;
+        console.log("response",response);
+        let data = await response.json();
+        console.log("jsonresponse",data);
+        //guardo token
+        localStorage.setItem("x",data.loginUser.token);
+        //guardo usuario logueado
+        let user = data.loginUser.user;
+        localStorage.setItem("nombre",user.name);
+        localStorage.setItem("email",user.email);
+        localStorage.setItem("dni",user.dni);
+        localStorage.setItem("obraSocial",user.obraSocial);
+        localStorage.setItem("plan",user.plan);
+        localStorage.setItem("afiliado",user.afiliado);
+        localStorage.setItem("direccion",user.direccion);
+        localStorage.setItem("cp",user.cp);
+        localStorage.setItem("ciudad",user.ciudad);
+        return ({user});//correcto
     }
     catch(error)
     {
