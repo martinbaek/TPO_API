@@ -1,3 +1,4 @@
+import { LocalGasStation } from '@material-ui/icons';
 import urlWebServices from '../controller/webServices.js';
 
 export const login= async function(login)
@@ -322,7 +323,46 @@ export const agregarNino= async function(agregarNino)
     {
         console.log("error",error);
     };
+}
+
+export const getUserByMail = async function()
+{
+    //url webservices
+    let url = urlWebServices.getImgUser;
+    //console.log("url",url);
+    //console.log("token",WebToken.webToken);
+    const formData = new URLSearchParams();
+    formData.append('email', localStorage.getItem('email'));
+    try
+    {
+        let response = await fetch(url,{
+            method: 'POST', // or 'PUT'
+            mode: "cors",
+            headers:{
+                'Accept':'application/x-www-form-urlencoded',
+                'x-access-token': localStorage.getItem('x'),
+                'Origin':'http://localhost:3000',
+                'Content-Type': 'application/x-www-form-urlencoded'},
+            body:formData
+        });
+        if (response.status===200)
+        {
+            let data = await response.json();
+            console.log("encontrado",data);
+            let usuario = data.loginUser;
+            return usuario;
+        }
+        else
+        {
+            let vacio=[];
+            console.log("No hay imagenes")
+            return (vacio);
+            
+        }
     }
-
-
+    catch(error)
+    {
+        console.log("error",error);
+    };
+}
     
