@@ -250,7 +250,6 @@ export const registration= async function(registration)
     };
 }
 
-
 export const agregarNino= async function(agregarNino)
     {
         //url webservices
@@ -317,6 +316,79 @@ export const agregarNino= async function(agregarNino)
         console.log("error",error);
     };
     }
+
+
+
+
+
+
+    export const getNino= async function(getNino)
+    {
+        //url webservices
+    let url = urlWebServices.getNino;
+    //armo json con datos
+    const formData = new URLSearchParams();
+    formData.append('name', agregarNino.name);
+    formData.append('peso', agregarNino.peso);
+    formData.append('altura', agregarNino.altura);
+    formData.append('diametroCabeza', agregarNino.diametroCabeza);
+    formData.append('medicamentos', agregarNino.medicamentos);
+    formData.append('obs', agregarNino.obs);
+    formData.append('estudios', agregarNino.estudios);
+    formData.append('resultados', agregarNino.resultados);
+  
+    //console.log("dato",formData);
+    //console.log("url",url);
+    try
+    {
+        let response = await fetch(url,{
+            method: 'GET', // or 'PUT'
+            mode: "cors",
+            headers:{
+                'Accept':'application/x-www-form-urlencoded',
+                'x-access-token': WebToken.webToken,
+                'Origin':'http://localhost:3000',
+                'Content-Type': 'application/x-www-form-urlencoded'},
+            body: formData,
+            
+        });
+        
+        let rdo = response.status;
+        console.log("response",response);
+        let data = await response.json();
+        console.log("jsonresponse",data);
+            switch(rdo)
+            {
+                case 201:
+                {
+                    //guardo token
+                    localStorage.setItem("x",data.loginUser.token);
+                    //guardo usuario logueado
+                    let user = data.loginUser.nino;
+                    localStorage.setItem("name",user.name);
+                    localStorage.setItem("peso",user.peso);
+                    localStorage.setItem('altura', user.altura);
+                    localStorage.setItem('diametroCabeza', user.diametroCabeza);
+                    localStorage.setItem('medicamentos', user.medicamentos);
+                    localStorage.setItem('obs', user.obs);
+                    localStorage.setItem('estudios', user.estudios);
+                    localStorage.setItem('resultados', user.resultados);
+  
+                    return ({rdo:0,mensaje:"Ok"});//correcto
+                }
+                default:
+                {
+                    //otro error
+                    return ({rdo:1,mensaje:"Ha ocurrido un error"});                
+                }
+            }
+    }
+    catch(error)
+    {
+        console.log("error",error);
+    };
+    }
+
 
 
     

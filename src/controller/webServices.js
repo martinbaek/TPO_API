@@ -10,6 +10,7 @@ const urlWebServices = {
     uploadFileImg: urlApi + "api/users/uploadImg",
     registration:urlApi +"api/users/registration",
     agregarNino:urlApi +"api/users/agregarNino",
+    getNino:urlApi +"api/users/getNino",
 }
 
 export default urlWebServices;
