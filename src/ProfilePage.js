@@ -74,8 +74,7 @@ function ProfilePage(props) {
     {
       //traer imagenes de User
       let p = await getPerfil();
-      setUsuario(p);
-      setEmail(p);
+      setUsuario(p.user);
       setUsuarioValido(true);
       console.log(usuario)
     }
@@ -92,42 +91,24 @@ function ProfilePage(props) {
     console.log("rdoPerfil",rdo)
 
   }
-
   return (
     <div>
       <DrawerLogged/>
-    <div className={classNames(classes.main, classes.mainRaised)}>
-      <div>
-        <div className={classes.container}>
-          <GridContainer>
-            {usuario => {          
-              let mail = mail;
-              let name = name;
-              let dni = dni;
-              let obraSocial = obraSocial;
-              let plan = plan;
-              let afiliado = afiliado;
-              let direccion = direccion;
-              let cp = cp;
-              let ciudad = ciudad;
-              console.log("Perfil",usuario);
-              return (
-                <GridItem xs={12} sm={4} md={4} className={classes.GridItem}>
-                  <Card
-                    color={"gray"}
-                    subtitulo={""}
-                    colorBoton= "rose"
-                    titulo={mail}
-                  >
-                  </Card>
-                  {usuario.mail}
-                </GridItem>
-              );
-            }}
-          </GridContainer>
-          </div>
-        </div>
+    <div>
+      {cargarPerfil}
+      <div className="App-principal" >
+      <h3>{usuario.name}</h3>
+      <h3>{usuario.email}</h3>
+      <h3>{usuario.dni}</h3>
+      <h3>{usuario.obraSocial}</h3>
+      <h3>{usuario.plan}</h3>
+      <h3>{usuario.afiliado}</h3>
+      <h3>{usuario.direccion}</h3>
+      <h3>{usuario.cp}</h3>
+      <h3>{usuario.ciudad}</h3>
+
       </div>
+    </div>
       
     </div>
   );

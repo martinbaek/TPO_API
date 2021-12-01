@@ -399,9 +399,9 @@ export const getPerfil = async function(){
                   case 201:
                   {
                       //guardo token
-                      localStorage.setItem("x",data.loginUser.token);
+                      localStorage.setItem("x",data.getPerfil.token);
                       //guardo usuario logueado
-                      let user = data.loginUser.user;
+                      let user = data.getPerfil.user;
                       localStorage.setItem("nombre",user.name);
                       localStorage.setItem("email",user.email);
                       localStorage.setItem("dni",user.dni);
