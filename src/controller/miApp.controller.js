@@ -251,7 +251,6 @@ export const registration= async function(registration)
     };
 }
 
-
 export const agregarNino= async function(agregarNino)
     {
         //url webservices
@@ -369,4 +368,61 @@ export const getUserByMail = async function()
         console.log("error",error);
     };
 }
-    
+export const getPerfil = async function(){
+      //url webservices
+      let url = urlWebServices.getPerfil;
+      //armo json con datos
+      const formData = new URLSearchParams();
+      formData.append('email', localStorage.getItem('email'));
+      //console.log("dato",formData);
+      //console.log("url",url);
+      try
+      {
+          let response = await fetch(url,{
+              method: 'POST', // or 'PUT'
+              mode: "cors",
+              headers:{
+                  'Accept':'application/x-www-form-urlencoded',
+                 // 'x-access-token': WebToken.webToken,
+                  'Origin':'http://localhost:3000',
+                  'Content-Type': 'application/x-www-form-urlencoded'},
+              body: formData,
+              
+          });
+          
+          let rdo = response.status;
+          console.log("response",response);
+          let data = await response.json();
+          console.log("jsonresponse",data);
+              switch(rdo)
+              {
+                  case 201:
+                  {
+                      //guardo token
+                      localStorage.setItem("x",data.loginUser.token);
+                      //guardo usuario logueado
+                      let user = data.loginUser.user;
+                      localStorage.setItem("nombre",user.name);
+                      localStorage.setItem("email",user.email);
+                      localStorage.setItem("dni",user.dni);
+                      localStorage.setItem("obraSocial",user.obraSocial);
+                      localStorage.setItem("plan",user.plan);
+                      localStorage.setItem("afiliado",user.afiliado);
+                      localStorage.setItem("direccion",user.direccion);
+                      localStorage.setItem("cp",user.cp);
+                      localStorage.setItem("ciudad",user.ciudad);
+                      
+                      return {user};//correcto
+                  }
+                  default:
+                  {
+                      //otro error
+                      return ({rdo:1,mensaje:"Ha ocurrido un error"});                
+                  }
+              }
+      }
+      catch(error)
+      {
+          console.log("error",error);
+      };
+} 

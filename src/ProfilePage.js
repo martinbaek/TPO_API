@@ -6,7 +6,7 @@ import DrawerLogged from './componentes/DrawerLogged';
 import IconoPaciente from './componentes/IconoPaciente';
 import ProfileGrid from './componentes/ProfileGrid';
 import EditButton from './componentes/EditButton';
-import {getUserByMail} from "./controller/miApp.controller";
+import {getPerfil} from "./controller/miApp.controller";
 import React,{useEffect} from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -73,17 +73,18 @@ function ProfilePage(props) {
     async function componentDidMount() 
     {
       //traer imagenes de User
-      let p = await getUserByMail();
-      setUsuario(p); 
+      let p = await getPerfil();
+      setUsuario(p);
+      setEmail(p);
       setUsuarioValido(true);
       console.log(usuario)
     }
     componentDidMount();
   },[]);
 
-  const getPerfil = async function(){
+  const cargarPerfil = async function(){
     console.log("Perfil",usuario)
-    let rdo = await getUserByMail();
+    let rdo = await getPerfil();
     setUsuario(rdo);
     setUsuarioValido(true);
 

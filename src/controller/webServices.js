@@ -11,7 +11,8 @@ const urlWebServices = {
     registration:urlApi +"api/users/registration",
     agregarNino:urlApi +"api/users/agregarNino",
     getUser: urlApi + "api/users/",
-    getUserByMail: urlApi + "api/users/userByMail"
+    getUserByMail: urlApi + "api/users/userByMail",
+    getPerfil: urlApi + "api/users/getPerfil"
 }
 
 export default urlWebServices;
