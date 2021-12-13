@@ -29,44 +29,8 @@ function ProfilePage(props) {
   const { ...rest } = props;
 
   const [usuario,setUsuario]=React.useState('');
-  const [email,setEmail]=React.useState('');
-  const[name,setName]=React.useState('');
-  const[dni,setDni]=React.useState('');
-  const[obraSocial,setObraSocial]=React.useState('');
-  const[plan,setPlan]=React.useState('');
-  const[afiliado,setAfiliado]=React.useState('');
-  const[direccion,setDireccion]=React.useState('');
-  const[cp,setCp]=React.useState('');
-  const[ciudad,setCiudad]=React.useState('');
   const[usuarioValido,setUsuarioValido]=React.useState(false);
 
-  const handleEmail=(event)=>{
-    setEmail(event.target.value);
-  }
-  const handleName=(event)=>{    
-    setName(event.target.value);
-  }
-  const handleDni=(event)=>{    
-    setDni(event.target.value);
-  }
-  const handleObraSocial=(event)=>{    
-    setObraSocial(event.target.value);
-  }
-  const handlePlan=(event)=>{    
-    setPlan(event.target.value);
-  }
-  const handleAfiliado=(event)=>{    
-    setAfiliado(event.target.value);
-  }
-  const handleDireccion=(event)=>{    
-    setDireccion(event.target.value);
-  }
-  const handleCp=(event)=>{    
-    setCp(event.target.value);
-  }
-  const handleCiudad=(event)=>{    
-    setCiudad(event.target.value);
-  }
 
   console.log("cargacomponente");
   useEffect(()=>{

@@ -426,3 +426,50 @@ export const getPerfil = async function(){
           console.log("error",error);
       };
 } 
+export const getNinos = async function(){
+    //url webservices
+    let url = urlWebServices.getNinos;
+    //armo json con datos
+    const formData = new URLSearchParams();
+    formData.append('email', localStorage.getItem('email'));
+    //console.log("dato",formData);
+    //console.log("url",url);
+    try
+    {
+        let response = await fetch(url,{
+            method: 'POST', // or 'PUT'
+            mode: "cors",
+            headers:{
+                'Accept':'application/x-www-form-urlencoded',
+               // 'x-access-token': WebToken.webToken,
+                'Origin':'http://localhost:3000',
+                'Content-Type': 'application/x-www-form-urlencoded'},
+            body: formData,
+            
+        });
+        
+        let rdo = response.status;
+        console.log("response",response);
+        let data = await response.json();
+        console.log("jsonresponse",data);
+            switch(rdo)
+            {
+                case 200:
+                {
+                    //guardo nino logueado
+                    let ninos = data.data
+                    
+                    return ninos;//correcto
+                }
+                default:
+                {
+                    //otro error
+                    return ({rdo:1,mensaje:"Ha ocurrido un error"});                
+                }
+            }
+    }
+    catch(error)
+    {
+        console.log("error",error);
+    };
+} 
